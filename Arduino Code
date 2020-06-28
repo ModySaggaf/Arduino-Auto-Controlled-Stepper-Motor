@@ -1,0 +1,24 @@
+#include <Stepper.h>
+   
+   int Steps = 64;
+   Stepper Motor(Steps, 3, 5, 4, 6);
+
+void setup() {
+  Motor.setSpeed(30);
+
+}     
+
+void loop() {
+
+  tone(10,500,100);delay(300);
+  Motor.step(2*Steps);
+  delay(2000);
+  tone(10,500,100);delay(300);
+  
+  Motor.step(-2*Steps);
+  delay(2500);
+  tone(10,500,200);delay(300);
+  
+  delay(3000);
+}
+
